@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {useRouter} from "next/router"
 export default function nav() {
   const inactiveLink= 'flex gap-1';
   const activeLink= inactiveLink+' bg-white text-blue-900 rounded-l-lg';
@@ -24,7 +25,7 @@ export default function nav() {
         <span className="">EcommerceAdmin</span>
       </Link>
       <nav className="flex flex-col gap-2">
-        <Link href={"/"} className={pathname.includes('/')?activeLink:inactiveLink}>
+        <Link href={"/"} className={pathname==="/"? activeLink:inactiveLink}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
